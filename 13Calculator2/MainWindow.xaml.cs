@@ -137,6 +137,14 @@ namespace _13Calculator2
         public static double Multiply(double n1, double n2)
         { return n1 * n2; }
         public static double Divide(double n1, double n2)
-        { return n1 / n2; }
+        {
+            if (n2 == 0)
+            {
+                MessageBox.Show("Division by Zero is Invalid", "Wrong Operation", MessageBoxButton.OK, MessageBoxImage.Error);
+                return 0;
+            }
+            else
+                return n1 / n2;
+        }
     }
 }
